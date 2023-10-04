@@ -1,0 +1,38 @@
+$main_color: #413B39;
+$secondary_color: #DE3246;
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    color: $main_color;
+}
+
+._container {
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 309px;
+
+    @media (max-width:1920px) {
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0px 70px;
+    }
+
+    @media (max-width:1439px) {
+        max-width: 1439px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0px 20px;
+    }
+}
+
+.btn {
+    max-height: 51px;
+    padding: 15px 34px;
+    border: 2px solid $secondary_color;
+    border-radius: 5px;
+    white-space: nowrap;
+}

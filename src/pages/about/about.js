@@ -1,1 +1,1 @@
-import './about.sass';
+import './about.scss';
