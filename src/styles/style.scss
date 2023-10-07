@@ -1,11 +1,27 @@
-$main_color: #413B39;
-$secondary_color: #DE3246;
+:root {
+    --main_color: #413B39;
+    --secondary_color: #DE3246;
+    --reverse_color: #FFFFFF;
+
+    --header__line_color: #D9D9D9;
+    --hover: #FFFFFF;
+    --active: #9C1928;
+    --icons: var(--main_color);
+    --text: var(--main_color);
+    --border: var(--secondary_color);
+    --background: var(--secondary_color);
+}
 
 body {
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
     font-size: 17px;
-    color: $main_color;
+    color: var(--text);
+}
+
+
+.body_lock {
+    overflow: hidden;
 }
 
 ._container {
@@ -31,8 +47,9 @@ body {
 
 .btn {
     max-height: 51px;
-    padding: 15px 34px;
-    border: 2px solid $secondary_color;
+    padding: 15px 33px 14px;
+    border: 2px solid var(--border);
     border-radius: 5px;
     white-space: nowrap;
+    cursor: pointer;
 }
