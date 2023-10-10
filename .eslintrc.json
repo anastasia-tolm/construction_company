@@ -34,7 +34,6 @@
     }
   },
   "rules": {
-    "func-names": "off",
     "prettier/prettier": "error",
     "no-console": "error",
     "import/no-extraneous-dependencies": [
