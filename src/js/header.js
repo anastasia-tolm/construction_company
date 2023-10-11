@@ -16,20 +16,22 @@ if (iconMenu) {
 
 // Спойлер
 
-document.addEventListener('DOMContentLoaded', () => {
-  const menuItems = document.querySelectorAll('.menu__item-spoiler');
+if (document.documentElement.clientWidth < 767) {
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuItems = document.querySelectorAll('.menu__item-spoiler');
 
-  menuItems.forEach((menuItem) => {
-    const submenuToggle = menuItem.querySelector('a');
+    menuItems.forEach((menuItem) => {
+      const submenuToggle = menuItem.querySelector('a');
 
-    submenuToggle.addEventListener('click', (event) => {
-      event.preventDefault(); // Отменяем стандартное действие ссылки
-      menuItem
-        .querySelector('.menu__sublist')
-        .classList.toggle('menu__sublist_active');
-      menuItem
-        .querySelector('.menu__arrow')
-        .classList.toggle('menu__arrow_active');
+      submenuToggle.addEventListener('click', (event) => {
+        event.preventDefault(); // Отменяем стандартное действие ссылки
+        menuItem
+          .querySelector('.menu__sublist')
+          .classList.toggle('menu__sublist_active');
+        menuItem
+          .querySelector('.menu__arrow')
+          .classList.toggle('menu__arrow_active');
+      });
     });
   });
-});
+}

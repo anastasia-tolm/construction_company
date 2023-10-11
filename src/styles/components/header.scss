@@ -147,12 +147,16 @@
         @media (min-width: 1312px) {
             @media (hover: hover) {
                 &:hover {
+
+                    background-color: var(--background);
+                    color: var(--reverse_color);
+
                     .menu__arrow {
                         transform: rotate(180deg);
                     }
 
                     .menu__arrow path {
-                        stroke: var(--hover);
+                        stroke: var(--reverse_color);
                     }
 
                     .menu__sublist {
@@ -160,15 +164,12 @@
                         visibility: visible;
                         pointer-events: all;
                     }
-
-                    background-color: var(--background);
-                    color: var(--hover);
                 }
             }
+        }
 
-            &:active {
-                background-color: var(--active);
-            }
+        &:active {
+            background-color: var(--active);
         }
 
         @media (max-width:767px) {
@@ -184,6 +185,15 @@
         @media (max-width:767px) {
             font-size: 20px;
         }
+
+        &:focus {
+            background-color: var(--focus);
+            color: var(--reverse_color);
+
+            .menu__arrow path {
+                stroke: var(--reverse_color);
+            }
+        }
     }
 
     &__sublist {
@@ -197,7 +207,6 @@
         border-top: 2px solid var(--header__line_color);
 
         @media (min-width:1312px) {
-            // transform: translate(0px, 2px);
             opacity: 0;
             visibility: hidden;
             pointer-events: none;
@@ -216,7 +225,6 @@
             margin: 0px;
             padding-top: 8px;
         }
-
     }
 
     &__sublist_active {
@@ -240,7 +248,6 @@
         @media (max-width:767px) {
             padding: 8px 0px;
         }
-
     }
 
     &__body-tablet {
@@ -439,8 +446,17 @@
     }
 
     &__btn {
-
         z-index: 5;
+
+        @media (hover: hover) {
+            &:hover {
+                border-color: var(--button_hover);
+            }
+        }
+
+        &:focus {
+            border-color: var(--focus);
+        }
 
         @media (max-width:1312px) {
             margin-left: 43px;
