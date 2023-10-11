@@ -168,10 +168,6 @@
             }
         }
 
-        &:active {
-            background-color: var(--active);
-        }
-
         @media (max-width:767px) {
             padding: 0;
 
@@ -186,12 +182,14 @@
             font-size: 20px;
         }
 
-        &:focus {
-            background-color: var(--focus);
-            color: var(--reverse_color);
+        @media (min-width:1313px) {
+            &:focus {
+                background-color: var(--focus);
+                color: var(--reverse_color);
 
-            .menu__arrow path {
-                stroke: var(--reverse_color);
+                .menu__arrow path {
+                    stroke: var(--reverse_color);
+                }
             }
         }
     }
@@ -278,7 +276,7 @@
             display: none;
         }
 
-        @media (min-width: 1312px) {
+        @media (min-width: 1313px) {
             display: none;
         }
 
@@ -308,9 +306,14 @@
         display: flex;
         flex-direction: column;
         gap: 34px;
-        margin-right: 18px;
-        padding-right: 19px;
+        margin-right: 58px;
+        padding-right: 58px;
         border-right: 2px solid var(--header__line_color);
+
+        @media (min-width:1001px) and (max-width:1312px) {
+            margin-right: calc(18px + (58 - 18) * ((100vw - 1000px) / (1312 - 1000)));
+            padding-right: calc(19px + (58 - 19) * ((100vw - 1000px) / (1312 - 1000)));
+        }
 
         @media (min-width:768px) and (max-width:1000px) {
             margin-right: calc(10px + (18 - 10) * ((100vw - 768px) / (1000 - 768)));
@@ -319,16 +322,23 @@
     }
 
     &__column:nth-child(2) {
+        flex: 0 1 309px;
         margin-right: 35px;
         padding-right: 25px;
 
+        @media (min-width:1001px) and (max-width:1312px) {
+            margin-right: calc(35px + (116 - 35) * ((100vw - 1000px) / (1312 - 1000)));
+        }
+
         @media (min-width:768px) and (max-width:1000px) {
             padding-right: calc(0px + (25 - 0) * ((100vw - 768px) / (1000 - 768)));
+            margin-right: calc(0px + (35 - 0) * ((100vw - 768px) / (1000 - 768)));
         }
     }
 
     &__column:nth-child(3) {
         display: flex;
+        flex: 0 1 290px;
         flex-direction: column;
         gap: 35px;
     }
@@ -337,11 +347,23 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
+
+
     }
 
     &__link-tablet {
         font-size: 20px;
         white-space: nowrap;
+
+        @media (hover: hover) {
+            &:hover {
+                color: var(--secondary_color);
+            }
+        }
+
+        &:active {
+            color: var(--active);
+        }
     }
 
     &__sublist-tablet {
@@ -353,6 +375,18 @@
     &__sub-link-tablet {
         font-weight: 400;
         white-space: nowrap;
+
+        @media (hover: hover) {
+            &:hover {
+                font-weight: 700;
+                color: var(--secondary_color);
+            }
+        }
+
+        &:active {
+            font-weight: 700;
+            color: var(--active);
+        }
     }
 
     &__btn-mobile {
