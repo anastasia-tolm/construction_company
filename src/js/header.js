@@ -18,20 +18,15 @@ if (iconMenu) {
 
 if (document.documentElement.clientWidth < 767) {
   document.addEventListener('DOMContentLoaded', () => {
-    const menuItems = document.querySelectorAll('.menu__item-spoiler');
-
-    menuItems.forEach((menuItem) => {
-      const submenuToggle = menuItem.querySelector('a');
-
-      submenuToggle.addEventListener('click', (event) => {
-        event.preventDefault(); // Отменяем стандартное действие ссылки
-        menuItem
-          .querySelector('.menu__sublist')
-          .classList.toggle('menu__sublist_active');
-        menuItem
-          .querySelector('.menu__arrow')
-          .classList.toggle('menu__arrow_active');
+    const menuArrows = document.querySelectorAll('.menu__arrow');
+    const menuSublists = document.querySelectorAll('.menu__sublist');
+    if (menuArrows.length > 0) {
+      menuArrows.forEach((menuArrow, index) => {
+        menuArrow.addEventListener('click', () => {
+          menuArrow.classList.toggle('menu__arrow_active');
+          menuSublists[index].classList.toggle('menu__sublist_active');
+        });
       });
-    });
+    }
   });
 }
