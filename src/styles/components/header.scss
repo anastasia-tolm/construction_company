@@ -228,17 +228,6 @@
         @media (max-width:767px) {
             font-size: 20px;
         }
-
-        @media (min-width: 1312px) {
-            &:focus-visible {
-                background-color: var(--background);
-                color: var(--reverse_color);
-
-                .menu__arrow-svg path {
-                    stroke: var(--reverse_color);
-                }
-            }
-        }
     }
 
     &__sublist {
@@ -301,7 +290,6 @@
                 color: var(--active);
             }
         }
-
     }
 
     &__sublist_active {
@@ -313,15 +301,6 @@
         display: block;
         padding: 15px 0px 15px 20px;
 
-        @media (hover: hover) {
-            &:hover {
-                font-weight: 600;
-                text-decoration: underline;
-                text-decoration-thickness: 2px;
-                text-underline-offset: 5px;
-            }
-        }
-
         @media (max-width:767px) {
             padding: 8px 0px;
         }
@@ -330,6 +309,7 @@
     &__body-tablet {
         @media (min-width:768px) and (max-width: 1312px) {
             position: fixed;
+            visibility: hidden;
             top: 103px;
             left: 0;
             align-items: flex-start;
@@ -362,9 +342,9 @@
     }
 
     &__body-tablet_active {
-
         @media (min-width: 768px) and (max-width:1312px) {
             transform: translate(0px, 0px);
+            visibility: visible;
         }
     }
 
@@ -426,6 +406,12 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
+
+        @media (min-width: 768px) and (max-width: 1312px) {
+            :focus-visible {
+                color: var(--focus)
+            }
+        }
     }
 
     &__link-tablet {
@@ -452,6 +438,16 @@
     &__sub-link-tablet {
         font-weight: 400;
         white-space: nowrap;
+
+        @media (min-width: 768px) and (max-width: 1312px) {
+            :focus-visible {
+                font-weight: 700;
+                text-decoration: underline;
+                text-decoration-thickness: 2px;
+                text-underline-offset: 5px;
+                color: var(--text);
+            }
+        }
 
         @media (hover: hover) {
             &:hover {
@@ -525,6 +521,16 @@
                 top: 50%;
                 transform: scale(1) translate(0px, -50%);
             }
+
+            &:focus-visible {
+
+                &::before,
+                &::after,
+                span {
+                    background-color: var(--focus);
+                }
+
+            }
         }
 
         @media (max-width:767px) {
@@ -562,7 +568,7 @@
             margin-left: 43px;
         }
 
-        @media (min-width:992px) {
+        @media (min-width:768px) {
             &:focus-visible {
                 border-color: var(--focus);
             }
