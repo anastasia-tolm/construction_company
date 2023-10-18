@@ -13,7 +13,6 @@
         min-height: 101px;
         justify-content: space-between;
 
-
         @media (max-width:767px) {
             min-height: 83px;
         }
@@ -97,6 +96,11 @@
         }
     }
 
+    &__buttons {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+    }
 
     &__list {
         display: flex;
@@ -109,6 +113,7 @@
 
         @media (max-width:767px) {
             flex-direction: column;
+            margin-right: 0px;
         }
     }
 
@@ -148,6 +153,7 @@
         }
 
         @media (min-width: 1312px) {
+
             &:focus-within {
                 background-color: var(--background);
                 color: var(--reverse_color);
@@ -167,9 +173,7 @@
                 pointer-events: all;
                 visibility: visible;
             }
-        }
 
-        @media (min-width: 1313px) {
             @media (hover: hover) {
                 &:hover {
 
@@ -199,6 +203,7 @@
 
         @media (max-width:767px) {
             padding: 0px;
+            font-size: 20px;
 
             &:not(:last-child) {
                 margin-bottom: 20px;
@@ -213,12 +218,11 @@
             &:nth-child(3) {
                 margin-bottom: 0px;
             }
-
-            &:active {
-                font-weight: 700;
-                color: var(--active);
-            }
         }
+    }
+
+    &__item-block {
+        display: flex;
     }
 
     &__link {
@@ -226,7 +230,9 @@
         align-items: center;
 
         @media (max-width:767px) {
-            font-size: 20px;
+            &:active {
+                color: var(--active);
+            }
         }
     }
 
@@ -238,6 +244,7 @@
         color: var(--text);
         min-width: 316px;
         border-top: 2px solid var(--header__line_color);
+        font-size: 17px;
 
         @media (min-width:1312px) {
             opacity: 0;
@@ -261,6 +268,8 @@
     }
 
     &__sub-item {
+        font-weight: 400;
+
         @media (min-width:1312px) {
             &:focus-within {
                 font-weight: 600;
@@ -279,15 +288,7 @@
             }
 
             &:active {
-                font-weight: 400;
                 background-color: var(--active);
-                color: var(--reverse_color);
-            }
-        }
-
-        @media (max-width:767px) {
-            &:active {
-                color: var(--active);
             }
         }
     }
@@ -303,6 +304,11 @@
 
         @media (max-width:767px) {
             padding: 8px 0px;
+
+            &:active {
+                background-color: var(--reverse_color);
+                color: var(--active);
+            }
         }
     }
 
@@ -338,7 +344,6 @@
         @media (min-width: 1313px) {
             display: none;
         }
-
     }
 
     &__body-tablet_active {
@@ -363,6 +368,7 @@
 
     &__column:first-child {
         display: flex;
+        flex: 0 1 149px;
         flex-direction: column;
         gap: 34px;
         margin-right: 58px;
@@ -381,7 +387,7 @@
     }
 
     &__column:nth-child(2) {
-        flex: 0 1 309px;
+        flex: 0 1 271.5px;
         margin-right: 35px;
         padding-right: 25px;
 
@@ -391,13 +397,12 @@
 
         @media (min-width:768px) and (max-width:1000px) {
             padding-right: calc(0px + (25 - 0) * ((100vw - 768px) / (1000 - 768)));
-            margin-right: calc(0px + (35 - 0) * ((100vw - 768px) / (1000 - 768)));
         }
     }
 
     &__column:nth-child(3) {
         display: flex;
-        flex: 0 1 290px;
+        flex: 0 1 298px;
         flex-direction: column;
         gap: 35px;
     }
@@ -409,7 +414,9 @@
 
         @media (min-width: 768px) and (max-width: 1312px) {
             :focus-visible {
-                color: var(--focus)
+                text-decoration: underline;
+                text-decoration-thickness: 2px;
+                text-underline-offset: 5px;
             }
         }
     }
@@ -439,25 +446,13 @@
         font-weight: 400;
         white-space: nowrap;
 
-        @media (min-width: 768px) and (max-width: 1312px) {
-            :focus-visible {
-                font-weight: 700;
-                text-decoration: underline;
-                text-decoration-thickness: 2px;
-                text-underline-offset: 5px;
-                color: var(--text);
-            }
-        }
-
         @media (hover: hover) {
             &:hover {
-                font-weight: 700;
                 color: var(--secondary_color);
             }
         }
 
         &:active {
-            font-weight: 700;
             color: var(--active);
         }
     }
@@ -523,13 +518,8 @@
             }
 
             &:focus-visible {
-
-                &::before,
-                &::after,
-                span {
-                    background-color: var(--focus);
-                }
-
+                outline: 2px solid var(--focus);
+                outline-offset: 5px;
             }
         }
 
