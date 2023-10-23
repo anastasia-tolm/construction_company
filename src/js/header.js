@@ -12,12 +12,11 @@ function hideShowMenu() {
           iconMenu.classList.toggle('menu__icon_active');
           menuBody.classList.toggle('menu__body_active');
           menuBodyTablet.classList.toggle('menu__body-tablet_active');
-        })
+        });
       } else {
         alert('Ошибка: один из элементов для меню-бургера не найден');
-      };
-    }
-    )
+      }
+    });
   }
 }
 
