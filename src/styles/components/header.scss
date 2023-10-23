@@ -1,10 +1,8 @@
 .header {
-
-    &__wrapper {
-        position: fixed;
-        width: 100%;
-        background-color: #FFFFFF;
-    }
+    position: fixed;
+    width: 100%;
+    background-color: var(--reverse_color);
+    border-bottom: 2px solid var(--header__line_color);
 
     &__container {
         display: flex;
@@ -22,6 +20,10 @@
         display: flex;
         flex: 0 0 auto;
         z-index: 5;
+
+        :focus-visible {
+            outline: 2px solid var(--focus);
+        }
     }
 
     @media (max-width:767px) {
@@ -47,10 +49,6 @@
         @media (max-width:479px) {
             gap: 22px;
         }
-    }
-
-    &__line {
-        border-bottom: 2px solid var(--header__line_color);
     }
 }
 
@@ -140,18 +138,6 @@
         position: relative;
         padding: 41px 9px 40px 9px;
 
-        &:first-child {
-            margin-right: 23px;
-        }
-
-        &:nth-child(3) {
-            margin-left: 11px;
-
-            @media (max-width:767px) {
-                margin-left: 0px;
-            }
-        }
-
         @media (min-width: 1312px) {
 
             &:focus-within {
@@ -238,7 +224,7 @@
 
     &__sublist {
         position: absolute;
-        top: 100%;
+        top: 101px;
         left: 0;
         background-color: var(--reverse_color);
         color: var(--text);
@@ -295,7 +281,11 @@
 
     &__sublist_active {
         display: block;
-        border: none;
+
+        @media (max-width:767px) {
+            top: 100%;
+            border: none;
+        }
     }
 
     &__sub-link {
@@ -552,7 +542,6 @@
     }
 
     &__btn {
-        z-index: 5;
 
         @media (max-width:1312px) {
             margin-left: 43px;

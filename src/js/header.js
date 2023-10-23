@@ -4,13 +4,15 @@ function hideShowMenu() {
   const iconMenu = document.querySelector('.menu__icon');
   const menuBody = document.querySelector('.menu__body');
   const menuBodyTablet = document.querySelector('.menu__body-tablet');
-  if (iconMenu) {
+  if (iconMenu && menuBody && menuBodyTablet) {
     iconMenu.addEventListener('click', function () {
       document.body.classList.toggle('body_lock');
       iconMenu.classList.toggle('menu__icon_active');
       menuBody.classList.toggle('menu__body_active');
       menuBodyTablet.classList.toggle('menu__body-tablet_active');
     });
+  } else {
+    alert('Ошибка: один из элементов для меню-бургера не найден');
   }
 }
 
