@@ -5,7 +5,7 @@ function hideShowMenu() {
   const menuBody = document.querySelector('.menu__body');
   const menuBodyTablet = document.querySelector('.menu__body-tablet');
   if (iconMenu) {
-    iconMenu.addEventListener('click', function () {
+    iconMenu.addEventListener('click', () => {
       document.body.classList.toggle('body_lock');
       iconMenu.classList.toggle('menu__icon_active');
       menuBody.classList.toggle('menu__body_active');
