@@ -33,15 +33,11 @@ body {
 
     @media (max-width:1920px) {
         max-width: 1440px;
-        margin-left: auto;
-        margin-right: auto;
         padding: 0px 70px;
     }
 
     @media (max-width:1439px) {
         max-width: 1439px;
-        margin-left: auto;
-        margin-right: auto;
         padding: 0px 20px;
     }
 }
@@ -53,4 +49,20 @@ body {
     border-radius: 5px;
     white-space: nowrap;
     cursor: pointer;
+
+    @media (min-width:768px) {
+        &:focus-visible {
+            border-color: var(--focus);
+        }
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            border-color: var(--button_hover);
+        }
+    }
+
+    &:active {
+        border-color: var(--active);
+    }
 }
