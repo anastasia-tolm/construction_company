@@ -1,0 +1,68 @@
+:root {
+    --main_color: #413B39;
+    --secondary_color: #DE3246;
+    --reverse_color: #FFFFFF;
+
+    --header__line_color: #D9D9D9;
+    --button_hover: #FF2C44;
+    --active: #9C1928;
+    --focus: #9C1928;
+
+    --icons: var(--main_color);
+    --text: var(--main_color);
+    --border: var(--secondary_color);
+    --background: var(--secondary_color);
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    color: var(--text);
+}
+
+.body_lock {
+    overflow: hidden;
+}
+
+._container {
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 309px;
+
+    @media (max-width:1920px) {
+        max-width: 1440px;
+        padding: 0px 70px;
+    }
+
+    @media (max-width:1439px) {
+        max-width: 1439px;
+        padding: 0px 20px;
+    }
+}
+
+.btn {
+    max-height: 51px;
+    padding: 13px 33px 16px;
+    border: 2px solid var(--border);
+    border-radius: 5px;
+    white-space: nowrap;
+    cursor: pointer;
+
+    @media (min-width:768px) {
+        &:focus-visible {
+            border-color: var(--focus);
+        }
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            border-color: var(--button_hover);
+        }
+    }
+
+    &:active {
+        border-color: var(--active);
+    }
+}

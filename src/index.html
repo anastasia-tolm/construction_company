@@ -2,14 +2,317 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=р1, initial-scale=1.0">
-    <title>Главная</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Главная</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Istok+Web&family=Montserrat:wght@400;500;600;700&display=swap"
+                rel="stylesheet">
 </head>
 
 <body>
+        <!--HEADER-->
+        <header class="header">
+                <div class="header__container _container">
+                        <div class="header__logo">
+                                <a href="../index.html">
+                                        <img class="header__logo-img" src="./assets/images/logo.svg" width="159"
+                                                height="84" alt="Логотип МД-строй">
+                                </a>
+                        </div>
+                        <div class="header__menu menu">
+                                <nav class="nav">
+                                        <div class="menu__body">
+                                                <ul class="menu__list">
+                                                        <li class="menu__item"><a class="menu__link"
+                                                                        href="../index.html">Главная</a></li>
+                                                        <li class="menu__item"><a class="menu__link"
+                                                                        href="./pages/about/index.html">О
+                                                                        компании</a>
+                                                        </li>
+                                                        <li class="menu__item menu__item-spoiler">
+                                                                <div class="menu__item-block">
+                                                                        <a class="menu__link" href="#">Каталог</a>
+                                                                        <div class="menu__arrow">
+                                                                                <svg class="menu__arrow-svg"
+                                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                                        width="12" height="12"
+                                                                                        fill="none">
+                                                                                        <path stroke="#413B39"
+                                                                                                stroke-width="2"
+                                                                                                d="m2 4.5 4 4 4-4" />
+                                                                                </svg>
+                                                                        </div>
+                                                                </div>
+                                                                <ul class="menu__sublist">
+                                                                        <li class="menu__sub-item"><a
+                                                                                        class="menu__sub-link"
+                                                                                        href="#">Вагонка штиль
+                                                                                        лиственница</a></li>
+                                                                        <li class="menu__sub-item"><a
+                                                                                        class="menu__sub-link"
+                                                                                        href="#">Доска пола
+                                                                                        лиственница</a></li>
+                                                                        <li class="menu__sub-item"><a
+                                                                                        class="menu__sub-link"
+                                                                                        href="#">Доска пола
+                                                                                        сосна</a>
+                                                                        </li>
+                                                                        <li class="menu__sub-item"><a
+                                                                                        class="menu__sub-link"
+                                                                                        href="#">Имитация бруса
+                                                                                        сосна</a></li>
+                                                                        <li class="menu__sub-item"><a
+                                                                                        class="menu__sub-link"
+                                                                                        href="#">Имитация бруса
+                                                                                        лиственница</a></li>
+                                                                        <li class="menu__sub-item"><a
+                                                                                        class="menu__sub-link"
+                                                                                        href="#">Евровагонка
+                                                                                        лиственница</a></li>
+                                                                        <li class="menu__sub-item"><a
+                                                                                        class="menu__sub-link"
+                                                                                        href="#">Палубная доска
+                                                                                        лиственница</a></li>
+                                                                        <li class="menu__sub-item"><a
+                                                                                        class="menu__sub-link"
+                                                                                        href="#">Прямой планкен
+                                                                                        лиственница</a></li>
+                                                                        <li class="menu__sub-item"><a
+                                                                                        class="menu__sub-link"
+                                                                                        href="#">Косой планкен
+                                                                                        лиственница</a></li>
+                                                                        <li class="menu__sub-item"><a
+                                                                                        class="menu__sub-link"
+                                                                                        href="#">Террасная доска
+                                                                                        лиственница</a></li>
+                                                                </ul>
+                                                        </li>
+                                                        <li class="menu__item menu__item-spoiler">
+                                                                <div class="menu__item-block"><a class="menu__link"
+                                                                                href="#">Строительство</a>
+                                                                        <div class="menu__arrow">
+                                                                                <svg class="menu__arrow-svg"
+                                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                                        width="12" height="12"
+                                                                                        fill="none">
+                                                                                        <path stroke="#413B39"
+                                                                                                stroke-width="2"
+                                                                                                d="m2 4.5 4 4 4-4" />
+                                                                                </svg>
+                                                                        </div>
+                                                                </div>
+                                                                <ul class="menu__sublist">
+                                                                        <li class="menu__sub-item"><a
+                                                                                        class="menu__sub-link"
+                                                                                        href="#">Построенные
+                                                                                        здания</a>
+                                                                        </li>
+                                                                        <li class="menu__sub-item"><a
+                                                                                        class="menu__sub-link"
+                                                                                        href="#">Ремонт
+                                                                                        зданий и
+                                                                                        помещений</a>
+                                                                        </li>
+                                                                        <li class="menu__sub-item"><a
+                                                                                        class="menu__sub-link"
+                                                                                        href="#">Планировочные
+                                                                                        решения</a></li>
+                                                                </ul>
+                                                        </li>
+                                                        <li class="menu__item menu__item-spoiler">
+                                                                <div class="menu__item-block"><a class="menu__link"
+                                                                                href="#">Производство</a>
+                                                                        <div class="menu__arrow"><svg
+                                                                                        class="menu__arrow-svg"
+                                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                                        width="12" height="12"
+                                                                                        fill="none">
+                                                                                        <path stroke="#413B39"
+                                                                                                stroke-width="2"
+                                                                                                d="m2 4.5 4 4 4-4" />
+                                                                                </svg></div>
+                                                                </div>
+                                                                </a>
+                                                                <ul class="menu__sublist">
+                                                                        <li class="menu__sub-item"><a
+                                                                                        class="menu__sub-link"
+                                                                                        href="#">Столярная
+                                                                                        мастерская</a></li>
+                                                                        <li class="menu__sub-item"><a
+                                                                                        class="menu__sub-link"
+                                                                                        href="#">Сушильный
+                                                                                        цех</a></li>
+                                                                        <li class="menu__sub-item"><a
+                                                                                        class="menu__sub-link"
+                                                                                        href="#">Цех
+                                                                                        обработки</a></li>
+                                                                        <li class="menu__sub-item"><a
+                                                                                        class="menu__sub-link"
+                                                                                        href="#">Погрузка</a>
+                                                                        </li>
+                                                                </ul>
+                                                        </li>
+                                                        <li class="menu__item"><a class="menu__link"
+                                                                        href="#">Контакты</a></li>
+                                                </ul>
+                                        </div>
+                                        <div class="menu__buttons">
+                                                <button type="button" class="menu__btn-mobile">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27"
+                                                                fill="none">
+                                                                <path fill="#413B39" fill-rule="evenodd"
+                                                                        d="M23.055 17.122c-1.065-.613-2.443-1.287-3.634-.797-.94.368-1.566 1.84-2.193 2.575-.313.368-.69.429-1.19.245-3.572-1.41-6.266-3.74-8.271-6.927-.314-.49-.25-.92.125-1.349.564-.674 1.316-1.47 1.504-2.39.188-.92-.25-2.023-.69-2.82-.5-1.042-1.065-2.575-2.13-3.127-1.002-.551-2.318-.245-3.195.49C1.877 4.25 1.125 6.15 1.125 7.989c0 .552.063 1.042.188 1.594.313 1.226.877 2.39 1.566 3.494a23.12 23.12 0 0 0 1.63 2.391c1.88 2.513 4.26 4.72 7.017 6.375 1.379.797 2.82 1.533 4.386 2.023 1.692.552 3.259 1.104 5.076.797 1.942-.368 3.822-1.532 4.636-3.371.251-.552.314-1.165.188-1.717-.125-1.165-1.754-1.9-2.757-2.452Z"
+                                                                        clip-rule="evenodd" />
+                                                        </svg>
+                                                </button>
+                                                <button type="button" class="menu__icon">
+                                                        <span></span>
+
+                                                </button>
+                                        </div>
+                                        <div class="menu__body-tablet">
+                                                <div class="menu__columns">
+                                                        <ul class="menu__column">
+                                                                <li class="menu__item-tablet"><a
+                                                                                class="menu__link-tablet"
+                                                                                href="#">Главная</a>
+                                                                </li>
+                                                                <li class="menu__item-tablet"><a
+                                                                                class="menu__link-tablet"
+                                                                                href="./pages/about/index.html">О
+                                                                                компании</a>
+                                                                </li>
+                                                                <li class="menu__item-tablet"><a
+                                                                                class="menu__link-tablet"
+                                                                                href="./pages/about/index.html">Контакты</a>
+                                                                </li>
+                                                        </ul>
+                                                        <ul class="menu__column">
+                                                                <li class="menu__item-tablet"><a
+                                                                                class="menu__link-tablet"
+                                                                                href="#">Каталог</a>
+                                                                        <ul class="menu__sublist-tablet">
+                                                                                <li class="menu__sub-item-tablet">
+                                                                                        <a class="menu__sub-link-tablet"
+                                                                                                href="#">Вагонка
+                                                                                                штиль
+                                                                                                лиственница</a>
+                                                                                </li>
+                                                                                <li class="menu__sub-item-tablet">
+                                                                                        <a class="menu__sub-link-tablet"
+                                                                                                href="#">Доска
+                                                                                                пола
+                                                                                                лиственница</a>
+                                                                                </li>
+                                                                                <li class="menu__sub-item-tablet">
+                                                                                        <a class="menu__sub-link-tablet"
+                                                                                                href="#">Доска
+                                                                                                пола
+                                                                                                сосна</a>
+                                                                                </li>
+                                                                                <li class="menu__sub-item-tablet">
+                                                                                        <a class="menu__sub-link-tablet"
+                                                                                                href="#">Имитация
+                                                                                                бруса
+                                                                                                сосна</a>
+                                                                                </li>
+                                                                                <li class="menu__sub-item-tablet">
+                                                                                        <a class="menu__sub-link-tablet"
+                                                                                                href="#">Евровагонка
+                                                                                                лиственница</a>
+                                                                                </li>
+                                                                                <li class="menu__sub-item-tablet">
+                                                                                        <a class="menu__sub-link-tablet"
+                                                                                                href="#">Палубная
+                                                                                                доска
+                                                                                                лиственница</a>
+                                                                                </li>
+                                                                                <li class="menu__sub-item-tablet">
+                                                                                        <a class="menu__sub-link-tablet"
+                                                                                                href="#">Прямой
+                                                                                                планкен
+                                                                                                лиственница</a>
+                                                                                </li>
+                                                                                <li class="menu__sub-item-tablet">
+                                                                                        <a class="menu__sub-link-tablet"
+                                                                                                href="#">Косой
+                                                                                                планкен
+                                                                                                лиственница</a>
+                                                                                </li>
+                                                                                <li class="menu__sub-item-tablet">
+                                                                                        <a class="menu__sub-link-tablet"
+                                                                                                href="#">Террасная
+                                                                                                доска
+                                                                                                лиственница</a>
+                                                                                </li>
+                                                                        </ul>
+                                                                </li>
+                                                        </ul>
+                                                        <ul class="menu__column">
+                                                                <li class="menu__item-tablet"><a
+                                                                                class="menu__link-tablet"
+                                                                                href="#">Строительство</a>
+                                                                        <ul class="menu__sublist-tablet">
+                                                                                <li class="menu__sub-item-tablet">
+                                                                                        <a class="menu__sub-link-tablet"
+                                                                                                href="#">Построенные
+                                                                                                здания</a>
+                                                                                </li>
+                                                                                <li class="menu__sub-item-tablet">
+                                                                                        <a class="menu__sub-link-tablet"
+                                                                                                href="#">Ремонт
+                                                                                                зданий и
+                                                                                                помещений</a>
+                                                                                </li>
+                                                                                <li class="menu__sub-item-tablet">
+                                                                                        <a class="menu__sub-link-tablet"
+                                                                                                href="#">Планировочные
+                                                                                                решения</a>
+                                                                                </li>
+                                                                        </ul>
+                                                                </li>
+                                                                <li class="menu__item-tablet"><a
+                                                                                class="menu__link-tablet"
+                                                                                href="#">Производство
+                                                                        </a>
+                                                                        <ul class="menu__sublist-tablet">
+                                                                                <li class="menu__sub-item-tablet">
+                                                                                        <a class="menu__sub-link-tablet"
+                                                                                                href="#">Столярная
+                                                                                                мастерская</a>
+                                                                                </li>
+                                                                                <li class="menu__sub-item-tablet">
+                                                                                        <a class="menu__sub-link-tablet"
+                                                                                                href="#">Сушильный
+                                                                                                цех</a>
+                                                                                </li>
+                                                                                <li class="menu__sub-item-tablet">
+                                                                                        <a class="menu__sub-link-tablet"
+                                                                                                href="#">Цех
+                                                                                                обработки</a>
+                                                                                </li>
+                                                                                <li class="menu__sub-item-tablet">
+                                                                                        <a class="menu__sub-link-tablet"
+                                                                                                href="#">Погрузка</a>
+                                                                                </li>
+                                                                        </ul>
+                                                                </li>
+                                                        </ul>
+                                                </div>
+                                        </div>
+                                </nav>
+                                <button type="button" class="menu__btn btn">Заказать звонок</button>
+                        </div>
+
+                </div>
+                </div>
+        </header>
+        <!--HEADER-->
 </body>
 
+<script type="module" src="./js/header.js"></script>
 <script type="module" src="./js/main.js"></script>
 
 </html>

@@ -12,7 +12,10 @@
     "plugin:prettier/recommended",
     "eslint-config-prettier"
   ],
-  "plugins": ["import", "prettier"],
+  "plugins": [
+    "import",
+    "prettier"
+  ],
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module"
@@ -20,8 +23,13 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [".js"],
-        "moduleDirectory": ["node_modules", "src/"]
+        "extensions": [
+          ".js"
+        ],
+        "moduleDirectory": [
+          "node_modules",
+          "src/"
+        ]
       }
     }
   },
